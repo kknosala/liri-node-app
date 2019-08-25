@@ -57,12 +57,14 @@ var LIRI = function() {
 
     axios.get(URL).then(function(response) {
       var movieInfo = response.data;
+      console.log(movieInfo)
       console.log(`\nSearching for the moive "${movie}"\n`);
       console.log(`Title: ${movieInfo.Title}\n`);
       console.log(`Year: ${movieInfo.Year}\n`);
       console.log(`IMDB Rating: ${movieInfo.imdbRating}\n`);
       console.log(`Rotten Tomatoes Rating: ${movieInfo.Ratings[1].Value}\n`);
       console.log(`Country: ${movieInfo.Country}\n`);
+      console.log(`Language: ${movieInfo.Language}\n`)
       console.log(`Plot:\n ${movieInfo.Plot}\n`);
       console.log(`Actor(s): ${movieInfo.Actors}\n`);
       console.log("----------------\n");
